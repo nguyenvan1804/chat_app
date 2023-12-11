@@ -80,7 +80,7 @@ exports.sendOTP = catchAsync(async (req, res, next) => {
   console.log(new_otp);
 
   // TODO send mail
-  mailService.sendEmail({
+  await mailService.sendEmail({
     from: "nguyenhongvan18042003@gmail.com",
     to: user.email,
     subject: "Verification OTP",
